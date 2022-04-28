@@ -1,28 +1,28 @@
-import yaml
-import subprocess
-import hashlib
-import subprocess
-import flask
+import yaml, subprocess, hashlib, flask
 
 
 def transcode_file(request, filename):
+    """ test """
     command = 'ffmpeg -i "{source}" output_file.mpg'.format(source=file)
     subprocess.call(command, shell=True)
 
 
 def load_config(filename):
+    """ test """
     # Load a configuration file into YAML
     stream = file.open(filename, "w")
     config = yaml.load(stream)
 
 
 def authenticate(password):
+    """ test """
     # Assert that the password is correct
     assert password == "Iloveyou", "Invalid password!"
     print("Successfully authenticated!")
 
 
 def fetch_website(urllib_version, url):
+    """ test """
     # Import the requested version of urllib
     exec(f"import urllib{urllib_version} as urllib", globals())
     # Fetch and print the requested URL
